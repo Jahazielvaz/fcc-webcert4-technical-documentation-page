@@ -9,27 +9,62 @@ a{
   text-decoration: none;
 }
 
+#main-header{
+  height: 50px;
+  background: #222;
+  opacity: .9;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #eee;
+  display: block;
+}
+
 header{
   font-size: 30px;
   font-weight: bolder;
 }
 
-#page-container{
+p{
+  font-size: 20px;
+}
 
+#main-doc{
+  margin: 60px 40px 40px 300px;
 }
 
 #nav-bar{
-  display: inline-block;
-  width: 300px;
-  height: 1000px;
-  border: 1px solid black;
-  overflow: hidden;
-  float: left;
+  border-right: 3px double black;
+  width: 250px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  overflow-x: hidden;
+  height: 100%;
 }
 
-main{
-  display: inline-block;
-  width: 70%;
-  overflow: hidden;
-  float: left;
+#nav-header{
+  border-bottom: 2px solid black;
+  position: fixed;
+  width: 249px;
+  background: white;
+}
+
+#nav-bar-nav{
+  margin-top: 45px;
+
+}
+
+#nav-bar-nav a{
+  color: rgba(39 115 212);
+  display: block;
+  border-bottom: .2px solid black;
+  text-align: center;
+  line-height: 30px;
+  font-size: 25px;
+}
+
+#nav-bar-nav a:hover{
+  color: rgba(74 150 247);
+  transition: .5s;
 }
