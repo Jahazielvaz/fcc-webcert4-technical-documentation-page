@@ -7,10 +7,10 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <div id="page-container">
+    <div id="page_container">
 
   <!-- Main Header -->
-      <div id="main-header">
+      <div id="main_header">
         <svg width="600px" height="47px" viewBox="0 0 433 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
             <title>Logo Final Copy</title>
@@ -34,10 +34,10 @@
       </div>
   <!-- End of Main Header -->
 
-      <div id="nav-bar">
-        <header id="nav-header">Build A Form</header>
+      <div id="nav_bar">
+        <header id="nav_header">Build A Form</header>
 
-        <section id="nav-bar-nav">
+        <section id="nav_bar_nav">
           <a href="#">Introduction</a>
           <a href="#"></a>
           <a href="#"></a>
@@ -46,26 +46,50 @@
         </section>
       </div>
 
-      <main id="main-doc">
+      <main id="main_doc">
         <section id="introduction" class="main-section">
           <header >Introduction</header>
           <p>If you're anything like many of us, you've probably struggled with some kind of form at some point. Forms seem simple on surface level, and I feel like they are once you truly grasp the fundimentals. That being said, I bet you forms make you want to pull your hair out at some point. Here's my attempt at helping some poor soul, before they start re-thinking their life choices.</p>
-        </section>
+        </section><br><br><br>
 
-        <section id="form-element" class="main-section">
+        <section id="form_element" class="main-section">
           <header>The Form Element</header>
-          <p>Let's talk about what's in the form element, and what it does. But first, here's a code snippet.</p>
-          <pre class="code-snippet">
-            <code>
-              <p>
-                hello world
-              </p>
-            </code>
-          </pre>
-        </section>
+          <p>Let's talk about what's in the form element, and what it does. But first, here's a code snippet.</p><br>
+          <p class="code-snippet">
+              &nbsp;  &lt;form action="/mysamplepage.net" method="get"&gt;<br><br>
 
-        <section class="main-section">
-          <header></header>
+              &nbsp;  &lt;/form&gt;
+          </p><br>
+          <p>So as you can probably tell, the form element encompases the entire form, and determines the information exchange that is going to take place.</p><br>
+
+          <p style="font-weight:bolder">The Action Attribute:</p>
+          <p>This attribute determines the URL where you want the information to go</p><br>
+
+          <p style="font-weight: bolder;">The Method Attribute:</p>
+          <p>
+            This attribute determines the flow of the information, via the HTTP methods. To learn more about HTTP methods, check out this link <a href="https://www.w3schools.com/tags/ref_httpmethods.asp" target="_blank">HTTP methods w3schools</a>.
+            Let's take the <span style='font-weight: bold'>GET</span> method for example. This method requests information from a client (the computer that needs the information, such as a browser requesting information from a specific website). <br><br>
+
+            Or the <span style='font-weight: bold'>POST</span> method. This method does just the opposite. It sends a request to submit data from the client to the server. For example. You register your email on a website. The website (The client) requests to submit that information to the server (the host), which then in turn sends the data to a database.
+          </p>
+        </section><br><br><br>
+
+        <section id="the_input_element" class="main-section">
+          <header>The Input Element</header>
+          <p>Here's the code snippet to better understand this concept</p><br>
+          <p class="code-snippet">
+              &nbsp;  &lt;form action="/mysamplepage.net" method="get"&gt;<br>
+              &nbsp;  &nbsp;  &nbsp;  &lt;input type="text" name="fname" placeholder="Sample Text"&gt;<br>
+              &nbsp;  &lt;/form&gt;
+          </p><br>
+
+          <p>This is by far the most important element in a form, and the amount of things you can do with it, is so overwhelming, it's beyond the scope of this tutorial, but here's a link if you want to learn more about it <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">The Input Element Tutorial</a>. However, for the sake of this tutorial we will focus on the the 3 attributes in the above example, as well as a short list of different types of inputs you can use, along with what they do.
+          </p><br>
+
+          <p style="font-weight: bold">The Type Attribute:</p>
+          <p>This attribute determines what type of input it's going to be. Knowing what types  of inputs there are and how to use them efficiently is key, in order for your forms to have functionality. For example, if you wanted the user to type in their email address, you would use an email type, whereas if you wanted them to input a password, you would use the password type. Each of these attributes would provide different functionality. In the password example, when the user types in their password, it hides the actual characters as people type them in.</p>
+
+
         </section>
 
         <section class="main-section">

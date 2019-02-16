@@ -9,7 +9,7 @@ a{
   text-decoration: none;
 }
 
-#main-header{
+#main_header{
   height: 50px;
   background: #222;
   opacity: .9;
@@ -29,11 +29,11 @@ p{
   font-size: 20px;
 }
 
-#main-doc{
+#main_doc{
   margin: 60px 40px 40px 300px;
 }
 
-#nav-bar{
+#nav_bar{
   border-right: 3px double black;
   width: 250px;
   position: fixed;
@@ -43,19 +43,19 @@ p{
   height: 100%;
 }
 
-#nav-header{
+#nav_header{
   border-bottom: 2px solid black;
   position: fixed;
   width: 249px;
   background: white;
 }
 
-#nav-bar-nav{
+#nav_bar_nav{
   margin-top: 45px;
 
 }
 
-#nav-bar-nav a{
+#nav_bar_nav a{
   color: rgba(39 115 212);
   display: block;
   border-bottom: .2px solid black;
@@ -64,7 +64,20 @@ p{
   font-size: 25px;
 }
 
-#nav-bar-nav a:hover{
+#nav_bar_nav a:hover{
   color: rgba(74 150 247);
   transition: .5s;
+}
+
+.code-snippet{
+  background: #ddd;
+}
+
+code{
+  color: purple;
+}
+
+a{
+  list-style: none;
+  color: rgba(39 115 212);
 }
