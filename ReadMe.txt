@@ -14,7 +14,7 @@ User Story #4: Each section element with the class of main-section should also h
 User Story #5: The .main-section elements should contain at least 10 p elements total (not each).
 -
 User Story #6: The .main-section elements should contain at least 5x code elements total (not each).
-X
+-
 User Story #7: The .main-section elements should contain at least 5 li items total (not each).
 -
 User Story #8: I can see a nav element with a corresponding id="navbar".
@@ -30,8 +30,9 @@ User Story #12: Each element with the class of nav-link should contain text that
 User Story #13: When I click on a navbar element, the page should navigate to the corresponding section of the main-doc element (e.g. If I click on a nav-link element that contains the text "Hello world", the page navigates to a section element that has that id and contains the corresponding header.
 -
 User Story #14: On regular sized devices (laptops, desktops), the element with id="navbar" should be shown on the left side of the screen and should always be visible to the user.
-
+-
 User Story #15: My Technical Documentation page should use at least one media query.
+
 You can build your project by forking this CodePen pen. Or you can use this CDN link to run the tests in any environment you like: https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js
 Once you're done, submit the URL to your working project with all its tests passing.
 Remember to use the Read-Search-Ask method if you get stuck.
