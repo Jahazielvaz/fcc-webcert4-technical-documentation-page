@@ -30,7 +30,12 @@ p{
 }
 
 #main_doc{
-  margin: 60px 40px 40px 300px;
+  margin: 80px 40px 40px 300px;
+}
+
+.main-section:target{
+  border: .5px solid black;
+  padding: 4px;
 }
 
 #nav_bar{
@@ -70,11 +75,46 @@ p{
 }
 
 .code-snippet{
-  background: #ddd;
+  background: #333;
+  padding: 10px;
+  margin: 10px 0;
+  color: #ddd;
 }
 
-code{
-  color: purple;
+.snippet-text{
+  font-weight: bold;
+}
+
+.sub-title{
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+span{
+  font-weight: bold;
+}
+
+article{
+  padding: 20px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+#sample-input{
+  margin: 10px;
+  height: 30px;
+  width: 300px;
+  display: block;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+
+pre{
+  color: rgba(0, 178, 249);
+  font-size: 17.5px;
+  background: #333;
+  padding: 0 2px;
+  margin: 10px 0;
 }
 
 a{

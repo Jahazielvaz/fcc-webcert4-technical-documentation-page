@@ -38,11 +38,11 @@
         <header id="nav_header">Build A Form</header>
 
         <section id="nav_bar_nav">
-          <a href="#">Introduction</a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
-          <a href="#"></a>
+          <a class="nav-link" href="#introduction">Introduction</a>
+          <a class="nav-link" href="#the_form_element">The Form Element</a>
+          <a class="nav-link" href="#the_input_element">The Input Element</a>
+          <a class="nav-link" href="#form_validation">Form Validation</a>
+          <a class="nav-link" href="#css_source_code">Closing Remarks</a>
         </section>
       </div>
 
@@ -52,7 +52,7 @@
           <p>If you're anything like many of us, you've probably struggled with some kind of form at some point. Forms seem simple on surface level, and I feel like they are once you truly grasp the fundimentals. That being said, I bet you forms make you want to pull your hair out at some point. Here's my attempt at helping some poor soul, before they start re-thinking their life choices.</p>
         </section><br><br><br>
 
-        <section id="form_element" class="main-section">
+        <section id="the_form_element" class="main-section">
           <header>The Form Element</header>
           <p>Let's talk about what's in the form element, and what it does. But first, here's a code snippet.</p><br>
           <p class="code-snippet">
@@ -79,25 +79,111 @@
           <p>Here's the code snippet to better understand this concept</p><br>
           <p class="code-snippet">
               &nbsp;  &lt;form action="/mysamplepage.net" method="get"&gt;<br>
-              &nbsp;  &nbsp;  &nbsp;  &lt;input type="text" name="fname" placeholder="Sample Text"&gt;<br>
+              &nbsp;  &nbsp;  &nbsp;  &lt;input type="text" name="fname" placeholder="Sample Text" <span style="color: orange">required</span>&gt;<br>
               &nbsp;  &lt;/form&gt;
           </p><br>
 
-          <p>This is by far the most important element in a form, and the amount of things you can do with it, is so overwhelming, it's beyond the scope of this tutorial, but here's a link if you want to learn more about it <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">The Input Element Tutorial</a>. However, for the sake of this tutorial we will focus on the the 3 attributes in the above example, as well as a short list of different types of inputs you can use, along with what they do.
+          <p>This is by far the most important element in a form, and the amount of things you can do with it, is so overwhelming, it's beyond the scope of this tutorial, but here's a link if you want to learn more about it <a href="https://www.w3schools.com/tags/tag_input.asp" target="_blank">The Input Element Tutorial</a>. However, for the sake of this tutorial we will focus on the the 4 attributes in the above example, as well as a short list of different types of inputs you can use, along with what they do.
           </p><br>
 
-          <p style="font-weight: bold">The Type Attribute:</p>
-          <p>This attribute determines what type of input it's going to be. Knowing what types  of inputs there are and how to use them efficiently is key, in order for your forms to have functionality. For example, if you wanted the user to type in their email address, you would use an email type, whereas if you wanted them to input a password, you would use the password type. Each of these attributes would provide different functionality. In the password example, when the user types in their password, it hides the actual characters as people type them in.</p>
+          <p style="font-weight: bold">The Type Attribute</p>
+          <p>This attribute determines what type of input it's going to be. Knowing what types  of inputs there are and how to use them efficiently is key, in order for your forms to have functionality. For example, if you wanted the user to type in their email address, you would use an email type, whereas if you wanted them to input a password, you would use the password type. Each of these attributes would provide different functionality. In the password example, when the user types in their password, it hides the actual characters as people type them in. We'll discuss these more in detail below.</p>
+          <br>
+
+          <p style="font-weight: bold">The Name Attribute</p>
+          <p>This is an identifier attribute, which can be used to reference the specified element accross different platforms including, and I would say specially JavaScript. See examples of how to use it: <a href="https://www.w3schools.com/tags/att_name.asp">Name Attribute Usage Examples</a>.</p><br>
+
+          <p style="font-weight: bold">The Placeholder Attribute</p>
+          <p>Unlike the attributes we've been talking about, this one is actually pretty straight forward, and serves only one purpose. To display sample text inside of an input. See example below</p>
+          <p class="code-snippet">
+            <input id="sample-input" type="text" style="font-size: 20px" placeholder="This is the placeholder text. ">
+          </p><br>
+
+          <p style="font-weight: bold">The Required Attribute</p>
+          <p>This attribute forces the user to fill the specified input before they can move on, so definitely use with caution. But wait there is more ;)  <br>
+          That's not the only thing it can do. It can also serve as a client side validator, meaning, depending on the nature of the input, the required attribute will also look out for certain validation pitfalls. For example, if you were to use required on an email input. It would not accept your email address if the text didn't include @ symbol and the . right after it.
+        </p><br>
+
+          <article>
+            <p  style="text-align: center; font-weight: bolder; font-size: 25px;">Frequently Used Input Types</p><hr /><br>
+
+            <ul>
+              <li><span>Text:</span> Most common input. This is used for any form of response that you want to receive from the user.</li><br>
+
+              <li><span>Email:</span> This input is pretty self explanatory, however it's important to note. When the "required" attribute is used, it forces the user to input text in email format, such as using the @ and .</li><br>
+
+              <li><span>Password:</span> This is another special input type, which is great at protecting user privacy. When users are typing in this space, it visually replaces the real characters, with dots instead. This should keep user data, away from prying eyes.</li><br>
+
+              <li><span>Submit:</span> Similar to the button element, it allows the user to submit all the information</li><br>
+
+              <li><span>Checkbox:</span> It takes the form of a checkbox, and it allows the user to check or un-check it. Very useful if you're trying to do polling or other areas that require user prefrences </li><br>
+
+              <li><span>Radio:</span> Similar to the checkbox input, but the difference is that with the radio button, you can only choose one over the rest.</li>
+            </ul>
+          </article>
+
+        </section><br><br><br>
+
+        <section id="form_validation" class="main-section">
+          <header>Form Validation</header>
+          <p>Here, we'll give you an example of how to use JavaScript to validate a form on the client side.</p><br>
+          <p class="snippet-text">Code snippet</p>
+          <pre><code>
+              function validateForm(){
+                var formValues = document.forms[0]["your-name"].value;
+
+                if(formValues == ""){
+                  alert("Please include your name");
+                  return false;
+                }
+              }
+            </code></pre><br>
+
+          <p  class="sub-title">Let's break this all down:</p>
+          <p>The function called <b>validateForm</b> is the one you're going to input as an event inside your form element, see example below. Of course you don't have to name it that. You can name it anything you want, but keep your naming convention in mind, because it is a big factor in code reusability. See <a href="https://www.w3schools.com/js/js_conventions.asp">Javascript Style Guide</a> for more on naming conventions.</p><br>
+
+          <p class="snippet-text">Code snippet</p>
+          <p class="code-snippet">
+            &nbsp;  &lt;form action="/mysamplepage.net" method="get" <span style="color: orange">onsubmit="validateForm()</span>"&gt;
+          </p><br>
+          <p class="sub-title"></p><br>
+
+          <p class=sub-title>Selecting A Form Input In JS</p>
+          <p>The purpose of the code below, is to have a variable that targets the value or in other words the content that the user inputs inside the input box, so that we can tell JS to check it, and to give us a result based on whether the content is acceptable or not.</p><br>
+          <p>Assuming you already know how to create a variable, I'll spare you the details. More importantly, let's talk about document.forms</p>
+
+          <p class="snippet-text">Code snippet</p>
+          <pre><code>
+              var formValues = document.forms[0]["your-name"].value;
+          </code></pre>
+
+          <p>document is how you access the dom, in JavaScript. Go here <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Intro To The DOM</a> if you'd like to learn more about the DOM. There are many ways of selecting HTML elements, such as <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">getElementById()</a>, or <a href="https://www.w3schools.com/jsref/met_document_queryselector.asp">querySelector()</a>. But <b>document.forms</b> specifically looks for forms. If not specified, the forms attribute will select all forms within the page.</p>
+          <p>If you want to select a specific form, you can simply include the <a href="https://www.w3schools.com/js/js_arrays.asp">Index Number</a> or the id name right next to it. This is known as Bracket Notation.
+          You can also select an input inside a form via index number as well, or by selecting the value inside of the name attribute of the desired input, such as in the example above.</p><br>
+          <p>Once you've selected the desired input, you can target the content inside it by using value through dot notatio. <a href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781">Bracket vs Dot Notation</a>.</p>
+
+          <p class=sub-title>Conditional Statements</p>
+          <p>Conditional statements allow you to define the result or outcome, based on how the user interacts with your website.</p><br>
+          <p>In this tutorial, we're going to focus on the most popular one: if else statements</p>
 
 
-        </section>
 
-        <section class="main-section">
-          <header></header>
-        </section>
 
-        <section class="main-section">
-          <header></header>
+
+
+        </section><br><br><br>
+        <!-- All 5 code elements are going to go here -->
+        <section class="main-section" id="css_source_code">
+          <header>CSS Source Code</header>
+          <pre>
+            <code>
+              *{
+                border: 0;
+                padding: 0;
+                margin: 0;
+                list-style: none;
+              }
+            </code></pre>
         </section>
 
       </main>

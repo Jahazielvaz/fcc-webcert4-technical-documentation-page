@@ -1,0 +1,34 @@
+*{
+  border: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#register{
+  width: 300px;
+  padding: 40px;
+  margin: 200px auto;
+  border-radius: 10px;
+  box-shadow: 4px 4px 6px 5px rgba(0, 0, 0, .3);
+}
+
+#register .input{
+  width: 92%;
+  height: 25px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, .2);
+  font-size: 15px;
+  font-weight: bold;
+  padding: 3px 10px;
+}
+
+#submit{
+  height: 35px;
+  width: 100%;
+  background: rgba(21, 199, 133);
+  font-size: 20px;
+  border-radius: 5px;
+  color: #222;
+  font-weight: bolder;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Form Sample</title>
+    <link rel="stylesheet" href="./sample.css">
+    <script type="text/javascript" src="./sample.js"></script>
+  </head>
+  <body>
+    <form id="register" action="youtube.com" method="post" onsubmit="return validateForm()" name="registration">
+      <h1>Register</h1><br><br>
+      <label for="name">Name</label><br>
+      <input class="input" type="text" id="name" name="your-name" placeholder="John Doe"><br><br>
+
+      <label for="email">Email</label>
+      <input class="input" name="email" type="email" id="email" placeholder="john.doe@mail.com" required><br><br>
+
+      <label for="password">Password</label>
+      <input class="input" name="password" type="password" id="password" placeholder="L3dw2" required><br><br>
+
+      <input id="submit" type="submit" placeholder="Submit Info">
+    </form>
+  </body>
+</html>
