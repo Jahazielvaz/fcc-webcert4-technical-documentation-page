@@ -160,31 +160,107 @@
           <p>document is how you access the dom, in JavaScript. Go here <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction">Intro To The DOM</a> if you'd like to learn more about the DOM. There are many ways of selecting HTML elements, such as <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById">getElementById()</a>, or <a href="https://www.w3schools.com/jsref/met_document_queryselector.asp">querySelector()</a>. But <b>document.forms</b> specifically looks for forms. If not specified, the forms attribute will select all forms within the page.</p>
           <p>If you want to select a specific form, you can simply include the <a href="https://www.w3schools.com/js/js_arrays.asp">Index Number</a> or the id name right next to it. This is known as Bracket Notation.
           You can also select an input inside a form via index number as well, or by selecting the value inside of the name attribute of the desired input, such as in the example above.</p><br>
-          <p>Once you've selected the desired input, you can target the content inside it by using value through dot notatio. <a href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781">Bracket vs Dot Notation</a>.</p>
+          <p>Once you've selected the desired input, you can target the content inside it by using value through dot notatio. <a href="https://codeburst.io/javascript-quickie-dot-notation-vs-bracket-notation-333641c0f781">Bracket vs Dot Notation</a>.</p><br><br>
 
           <p class=sub-title>Conditional Statements</p>
-          <p>Conditional statements allow you to define the result or outcome, based on how the user interacts with your website.</p><br>
-          <p>In this tutorial, we're going to focus on the most popular one: if else statements</p>
+          <p>Conditional statements allow you to define the result or outcome, based on the value given to the conditional. This is useful since the value is usually determined by user input. This makes it easy to tell Javascript to not accept invalid user inputs. Furthermore, Javascript can tell the user why their input wasn't valid.</p>
+          <p>In this tutorial, we're going to focus on the most popular one: <b>if else </b>statements.</p><br>
+
+          <p class="snippet-text">Code snippet</p>
+          <pre><code>
+            function validateForm(){
+              var formValues = document.forms[0]["your-name"].value;
+
+              if(formValues === ""){
+                alert("Please include your name");
+                document.getElementById('name').style.border = '1px solid red';
+                return false;
+              } else if (formValues >= -Infinity){
+                alert("Please makes sure your name doesn't include numbers");
+                return false;
+              } else {
+                return document.write("Welcome To The Team");
+              }
+            }
+        </code></pre><br>
+        <p>There are 3 different statements you can make in this conditional. <br>
+          <b>If:</b> Allows you to set the condition. Or in other words, you're saying "If this condition is met (Or it can also be the other way. If this condition is not met)" Then I want you to do this. Or I want you to prevent this from happening <br>
+          <b>  Else if:</b> Allows you to set a follow up condition, meaning "Otherwise, if this other thing happens, or if this other thing doesn't happen. Then, do this". You typically only want to use multiple conditions for multiple outcomes, for example, in the text above, we want to validate the name in 2 different ways (Of course, in real life, you'd be much more worried about validating the password, than you would the name. But for the sake of these examples, we'll use the name instead). We're trying to make sure they don't leave it blank.
+        </p>
+
+        <pre><code>
+          if(formValues === "")
+        </code></pre>
+        <p>And we're telling it to tell the user not to leave the name blank, by generating an alert to get the user's attention, and to highlight the input field red, so it can be even more highlighted</p>
+
+        <pre><code>
+          {
+            alert("Please include your name");
+            document.getElementById('name').style.border = '1px solid red';
+            return false;
+        </code></pre>
+
+        <p>Disclaimer. We're telling it to return false, because by default, the submit button is set to submit all information to the server, and go through encoding etc. Any action or functionality is always true by default. Which means that by setting it to false, you're telling it not to take the action it was meant to take.</p><br>
 
 
-
-
-
-
+        <p><b>Else:</b> Finally, you're telling it "For any other result, take this action". It's a catch all statemenet</p>
+        <p>If you don't add anything after the if, or the else statement, it'll exude the <b>else</b> behavior</p><br>
+        <p>This should get you by for now.</p>
         </section><br><br><br>
         <!-- All 5 code elements are going to go here -->
         <section class="main-section" id="css_source_code">
           <header>CSS Source Code</header>
+          <p>This is all the  CSS source code, just in case you want to mess with it, or if you want to see  how I did it.</p>
           <pre>
             <code>
+              CSS Reset code: so there's no weird paddings or borders, etc.
+
               *{
                 border: 0;
                 padding: 0;
                 margin: 0;
                 list-style: none;
               }
+--------------------------------------------------------
+              The Form Element
+
+              #register{
+                width: 300px;
+                padding: 40px;
+                margin: 200px auto;
+                border-radius: 10px;
+                box-shadow: 4px 4px 6px 5px rgba(0, 0, 0, .3);
+              }
+
+--------------------------------------------------------
+              All The Inputs Inside Of The Form
+              #register .input{
+                width: 92%;
+                height: 25px;
+                border-radius: 5px;
+                box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, .2);
+                font-size: 15px;
+                font-weight: bold;
+                padding: 3px 10px;
+              }
+
+--------------------------------------------------------
+              The Submit button
+
+              #submit{
+                height: 35px;
+                width: 100%;
+                background: rgba(21, 199, 133);
+                font-size: 20px;
+                border-radius: 5px;
+                color: #222;
+                font-weight: bolder;
+              }
+
+
             </code></pre>
         </section>
+        <p>Enjoy! Go build something awesome!</p>
 
       </main>
     </div>
