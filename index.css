@@ -121,3 +121,54 @@ a{
   list-style: none;
   color: rgba(39 115 212);
 }
+
+@media(max-width: 930px){
+  #nav_bar{
+    width: 100%;
+    display: block;
+  }
+
+  #nav_bar_nav{
+    background: #222;
+    position: static;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  #nav_header{
+    display: none;
+  }
+
+  #main_doc{
+    margin: 210px 15px 40px 15px;
+  }
+
+  #main_header{
+    height: 50px;
+    background: #222;
+    opacity: .9;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    color: #eee;
+    display: block;
+  }
+
+  code{
+    font-size: 12px;
+  }
+
+  .code-snippet{
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 610px){
+  code{
+    font-size: 7px;
+  }
+
+  .code-snippet{
+    font-size: 12px;
+  }
+}
